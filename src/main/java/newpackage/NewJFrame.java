@@ -28,121 +28,100 @@ public class NewJFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jCheckBox1 = new javax.swing.JCheckBox();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        reg_submit = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        registration = new javax.swing.JLabel();
         reg_user = new javax.swing.JTextField();
-        reg_mail = new javax.swing.JTextField();
-        reg_pass = new javax.swing.JPasswordField();
+        username = new javax.swing.JLabel();
+        reg_pass = new javax.swing.JLabel();
+        email = new javax.swing.JLabel();
+        reg_email = new javax.swing.JTextField();
+        password = new javax.swing.JPasswordField();
+        register = new javax.swing.JButton();
+        background = new javax.swing.JLabel();
 
         jCheckBox1.setText("jCheckBox1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Mongolian Baiti", 3, 24)); // NOI18N
-        jLabel1.setText("Registration ");
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 0, 0), null, null));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText("Username");
+        registration.setFont(new java.awt.Font("Mongolian Baiti", 3, 36)); // NOI18N
+        registration.setForeground(new java.awt.Color(255, 255, 255));
+        registration.setText("Registration ");
+        jPanel1.add(registration, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setText("Email");
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setText("Password");
-
-        reg_submit.setText("Register");
-        reg_submit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                reg_submitActionPerformed(evt);
-            }
-        });
-
-        reg_user.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         reg_user.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 reg_userActionPerformed(evt);
             }
         });
+        jPanel1.add(reg_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 240, 40));
 
-        reg_mail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        username.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        username.setForeground(new java.awt.Color(255, 255, 255));
+        username.setText("Username");
+        jPanel1.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 150, 33));
 
-        reg_pass.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        reg_pass.addActionListener(new java.awt.event.ActionListener() {
+        reg_pass.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        reg_pass.setForeground(new java.awt.Color(255, 255, 255));
+        reg_pass.setText("Password");
+        jPanel1.add(reg_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 130, 30));
+
+        email.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        email.setForeground(new java.awt.Color(255, 255, 255));
+        email.setText("Email");
+        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 130, 30));
+
+        reg_email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                reg_passActionPerformed(evt);
+                reg_emailActionPerformed(evt);
             }
         });
+        jPanel1.add(reg_email, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, 240, 40));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addGap(44, 44, 44)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(reg_user)
-                            .addComponent(reg_mail)
-                            .addComponent(reg_pass, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(158, 158, 158)
-                        .addComponent(reg_submit)))
-                .addContainerGap(123, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addGap(55, 55, 55)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(reg_user, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(reg_mail, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(reg_pass, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(reg_submit)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        password.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passwordActionPerformed(evt);
+            }
+        });
+        jPanel1.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 240, 40));
+
+        register.setFont(new java.awt.Font("Arial Black", 3, 24)); // NOI18N
+        register.setText("REGISTER");
+        register.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerActionPerformed(evt);
+            }
+        });
+        jPanel1.add(register, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 220, 60));
+
+        background.setIcon(new javax.swing.ImageIcon("/Users/mac/Desktop/NetBeansProjects/JavaMiniProject/src/main/img/college.jpg")); // NOI18N
+        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 450));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void reg_submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reg_submitActionPerformed
+    private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
         // TODO add your handling code here:
-        login login = new login();
-        login.setVisible(true);
-        
-    }//GEN-LAST:event_reg_submitActionPerformed
+    }//GEN-LAST:event_passwordActionPerformed
+
+    private void reg_emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reg_emailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_reg_emailActionPerformed
 
     private void reg_userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reg_userActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_reg_userActionPerformed
 
-    private void reg_passActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reg_passActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_reg_passActionPerformed
+    private void registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerActionPerformed
+        login login=new login();
+        login.setVisible(true);
+    }//GEN-LAST:event_registerActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,14 +159,16 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel background;
+    private javax.swing.JLabel email;
     private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField reg_mail;
-    private javax.swing.JPasswordField reg_pass;
-    private javax.swing.JButton reg_submit;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPasswordField password;
+    private javax.swing.JTextField reg_email;
+    private javax.swing.JLabel reg_pass;
     private javax.swing.JTextField reg_user;
+    private javax.swing.JButton register;
+    private javax.swing.JLabel registration;
+    private javax.swing.JLabel username;
     // End of variables declaration//GEN-END:variables
 }

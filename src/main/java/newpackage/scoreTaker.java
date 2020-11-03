@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -14,6 +15,7 @@ public class scoreTaker extends javax.swing.JFrame {
     /**
      * Creates new form scoreTaker
      */
+
     public scoreTaker() {
         initComponents();
     }
@@ -27,20 +29,25 @@ public class scoreTaker extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        title = new javax.swing.JLabel();
         CETscore = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jLabel3 = new javax.swing.JLabel();
+        cetlabel = new javax.swing.JLabel();
+        genderlabel = new javax.swing.JLabel();
         categoryBox = new javax.swing.JComboBox<>();
-        jLabel4 = new javax.swing.JLabel();
+        categorylabel = new javax.swing.JLabel();
         predict = new javax.swing.JButton();
+        male = new javax.swing.JRadioButton();
+        female = new javax.swing.JRadioButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Mongolian Baiti", 3, 24)); // NOI18N
-        jLabel1.setText("How did you fare?");
+        title.setFont(new java.awt.Font("Arial", 3, 36)); // NOI18N
+        title.setForeground(new java.awt.Color(255, 255, 255));
+        title.setText("How did you fare?");
+        getContentPane().add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 10, 320, 50));
 
         CETscore.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         CETscore.addActionListener(new java.awt.event.ActionListener() {
@@ -48,28 +55,17 @@ public class scoreTaker extends javax.swing.JFrame {
                 CETscoreActionPerformed(evt);
             }
         });
+        getContentPane().add(CETscore, new org.netbeans.lib.awtextra.AbsoluteConstraints(324, 73, 196, 46));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText("CET Score");
+        cetlabel.setFont(new java.awt.Font("Arial Black", 3, 24)); // NOI18N
+        cetlabel.setForeground(new java.awt.Color(255, 255, 255));
+        cetlabel.setText("CET Score");
+        getContentPane().add(cetlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 170, 37));
 
-        jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jRadioButton1.setText("Male");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
-            }
-        });
-
-        jRadioButton3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jRadioButton3.setText("Female");
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setText("Gender");
+        genderlabel.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        genderlabel.setForeground(new java.awt.Color(255, 255, 255));
+        genderlabel.setText("Gender");
+        getContentPane().add(genderlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 120, 35));
 
         categoryBox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         categoryBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "General", "SC", "ST", "OBC", "TFWS", "PWD", "EWS", "VJ", "NT1", "NT2", "NT3" }));
@@ -78,65 +74,46 @@ public class scoreTaker extends javax.swing.JFrame {
                 categoryBoxActionPerformed(evt);
             }
         });
+        getContentPane().add(categoryBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, 202, 43));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setText("Category");
+        categorylabel.setFont(new java.awt.Font("Arial Black", 3, 24)); // NOI18N
+        categorylabel.setForeground(new java.awt.Color(255, 255, 255));
+        categorylabel.setText("Category");
+        getContentPane().add(categorylabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 140, 40));
 
-        predict.setText("Predict NOW!");
+        predict.setFont(new java.awt.Font("Arial Black", 3, 24)); // NOI18N
+        predict.setText("PREDICT NOW");
+        predict.setActionCommand("PREDICT NOW!");
         predict.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 predictActionPerformed(evt);
             }
         });
+        getContentPane().add(predict, new org.netbeans.lib.awtextra.AbsoluteConstraints(207, 382, 250, 58));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(94, 94, 94)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jRadioButton1)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton3))
-                            .addComponent(CETscore, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(categoryBox, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(predict))))
-                .addContainerGap(94, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(CETscore, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jLabel3))
-                .addGap(49, 49, 49)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(categoryBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(predict, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
-        );
+        male.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
+        male.setForeground(new java.awt.Color(255, 255, 255));
+        male.setText("MALE");
+        male.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                maleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(male, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 166, -1, -1));
+
+        female.setFont(new java.awt.Font("Lucida Grande", 3, 14)); // NOI18N
+        female.setForeground(new java.awt.Color(255, 255, 255));
+        female.setText("FEMALE");
+        female.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                femaleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(female, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 190, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Arial Black", 3, 24)); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/mac/Desktop/NetBeansProjects/JavaMiniProject/src/main/img/college copy 2.jpg")); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 678, 470));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -149,13 +126,17 @@ public class scoreTaker extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_categoryBoxActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
-
     private void predictActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_predictActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_predictActionPerformed
+
+    private void femaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_femaleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_femaleActionPerformed
+
+    private void maleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_maleActionPerformed
 
     /**
      * @param args the command line arguments
@@ -194,13 +175,15 @@ public class scoreTaker extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CETscore;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> categoryBox;
+    private javax.swing.JLabel categorylabel;
+    private javax.swing.JLabel cetlabel;
+    private javax.swing.JRadioButton female;
+    private javax.swing.JLabel genderlabel;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton male;
     private javax.swing.JButton predict;
+    private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }
